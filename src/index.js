@@ -36,7 +36,12 @@ const Title = () => {
   return <h2>Iron Flame (The Empyrean, 2)</h2>;
 };
 const Author = () => {
-  return <h4>Rebecca Yarros</h4>;
+  const inLineStyle = {
+    color: '#617d98',
+    fontSize: '0.75rem',
+    marginTop: '0.5rem',
+  };
+  return <h4 style={inLineStyle}>Rebecca Yarros</h4>;
 };
 
 root.render(<BookList />);
