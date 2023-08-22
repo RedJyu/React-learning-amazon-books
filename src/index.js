@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import './index.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const BookList = () => {
@@ -24,12 +26,17 @@ const Book = () => {
   );
 };
 
-const Image = () => <h2>Image placeholder</h2>;
+const Image = () => (
+  <img
+    src='https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL900_SR900,600_.jpg'
+    alt='Iron Flame (The Empyrean, 2)'
+  />
+);
 const Title = () => {
-  return <h2>Book Title</h2>;
+  return <h2>Iron Flame (The Empyrean, 2)</h2>;
 };
 const Author = () => {
-  return <h4>Author</h4>;
+  return <h4>Rebecca Yarros</h4>;
 };
 
 root.render(<BookList />);
