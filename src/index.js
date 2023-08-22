@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const BookList = () => {
   return (
-    <section>
+    <section className='list'>
       <Book />
       <Book />
       <Book />
@@ -18,7 +18,7 @@ const BookList = () => {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image />
       <Title />
       <Author />

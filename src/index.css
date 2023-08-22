@@ -9,3 +9,32 @@ body {
   background: #f1f5f8;
   color: #222;
 }
+
+.list {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.book img {
+  width: 100%;
+  object-fit: cover;
+}
+.book {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+.book h2 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
