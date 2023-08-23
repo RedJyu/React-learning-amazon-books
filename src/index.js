@@ -5,6 +5,11 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const author = 'Rebecca Yarros';
+const title = 'Iron Flame (The Empyrean, 2)';
+const img =
+  'https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL900_SR900,600_.jpg';
+
 const BookList = () => {
   return (
     <section className='list'>
@@ -19,29 +24,11 @@ const BookList = () => {
 const Book = () => {
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   );
-};
-
-const Image = () => (
-  <img
-    src='https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL900_SR900,600_.jpg'
-    alt='Iron Flame (The Empyrean, 2)'
-  />
-);
-const Title = () => {
-  return <h2>Iron Flame (The Empyrean, 2)</h2>;
-};
-const Author = () => {
-  const inLineStyle = {
-    color: '#617d98',
-    fontSize: '0.75rem',
-    marginTop: '0.5rem',
-  };
-  return <h4 style={inLineStyle}>Rebecca Yarros</h4>;
 };
 
 root.render(<BookList />);
