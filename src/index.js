@@ -28,7 +28,14 @@ const books = [
 // });
 
 const BookList = () => {
-  return <section className='list'>{newBooks}</section>;
+  return (
+    <section className='list'>
+      {books.map((book) => {
+        const { author, title, imf } = book;
+        return <Book {...book} />;
+      })}
+    </section>
+  );
 };
 
 const Book = (props) => {
