@@ -9,33 +9,26 @@ const author = 'Rebecca Yarros';
 const title = 'Iron Flame (The Empyrean, 2)';
 const img =
   'https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL900_SR900,600_.jpg';
+const books = [
+  {
+    author: 'James Clear',
+    title: 'test title',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/81hHy5XrdKL._AC_UL900_SR900,600_.jpg',
+  },
+  {
+    author: 'Rebecca Yarros',
+    title: 'Iron Flame (The Empyrean, 2)',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL900_SR900,600_.jpg',
+  },
+];
 
-const firstBook = {
-  author: 'James Clear',
-  title: 'test title',
-  img: 'https://images-na.ssl-images-amazon.com/images/I/81hHy5XrdKL._AC_UL900_SR900,600_.jpg',
-};
+// const names = ['john', 'pete', 'anna'];
+// const newNames = names.map((name) => {
+//   return <h1>{name}</h1>;
+// });
 
-const secondBook = {
-  author: 'Rebecca Yarros',
-  title: 'Iron Flame (The Empyrean, 2)',
-  img: 'https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL900_SR900,600_.jpg',
-};
 const BookList = () => {
-  return (
-    <section className='list'>
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      />
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
-    </section>
-  );
+  return <section className='list'>{newBooks}</section>;
 };
 
 const Book = (props) => {
