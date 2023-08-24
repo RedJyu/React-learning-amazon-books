@@ -26,49 +26,55 @@ const books = [
 // });
 
 const BookList = () => {
+  const getBook = (id) => {
+    const book = books.find((book) => book.id === id);
+    console.log(book);
+  };
+
   return (
     <section className='list'>
-      <EventExamples />
+      {/* <EventExamples /> */}
       {books.map((book) => {
-        return <Book {...book} key={book.id} />;
+        return <Book {...book} key={book.id} getBook={getBook} />;
       })}
     </section>
   );
 };
-const EventExamples = () => {
-  const handleFormInput = (e) => {
-    console.log(e.target.value);
-    console.log('form input');
-  };
-  const handleButton = () => {
-    alert('button click');
-  };
-  const handleSubmission = (e) => {
-    e.preventDefault();
-    console.log('submitted');
-  };
-  return (
-    <section>
-      <form onSubmit={handleSubmission}>
-        <h2>form</h2>
-        <input
-          type='text'
-          name='example'
-          onChange={handleFormInput}
-          style={{ margin: '1rem 0' }}
-        />
-      </form>
-      <button onClick={handleButton}>click me</button>
-    </section>
-  );
-};
+// const EventExamples = () => {
+//   const handleFormInput = (e) => {
+//     console.log(e.target.value);
+//     console.log('form input');
+//   };
+//   const handleButton = () => {
+//     alert('button click');
+//   };
+//   const handleSubmission = (e) => {
+//     e.preventDefault();
+//     console.log('submitted');
+//   };
+//   return (
+//     <section>
+//       <form onSubmit={handleSubmission}>
+//         <h2>form</h2>
+//         <input
+//           type='text'
+//           name='example'
+//           onChange={handleFormInput}
+//           style={{ margin: '1rem 0' }}
+//         />
+//       </form>
+//       <button onClick={handleButton}>click me</button>
+//     </section>
+//   );
+// };
 const Book = (props) => {
-  const { author, title, img } = props;
+  const { author, title, img, getBook, id } = props;
   return (
     <article className='book'>
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
+      <button onClick={getBook}>click</button>
     </article>
   );
 };
