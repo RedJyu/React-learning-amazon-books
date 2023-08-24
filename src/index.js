@@ -7,11 +7,6 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// const names = ['john', 'pete', 'anna'];
-// const newNames = names.map((name) => {
-//   return <h1>{name}</h1>;
-// });
-
 const BookList = () => {
   const getBook = (id) => {
     const book = books.find((book) => book.id === id);
